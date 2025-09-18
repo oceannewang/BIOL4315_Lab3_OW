@@ -8,7 +8,7 @@ date: "2025-09-18"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## 1. The Set
+## 1. The Setup
 ```{bash, eval=FALSE}
 #Pull quast for QC of assembly
 docker pull quay.io/biocontainers/quast:5.3.0--py313pl5321h5ca1c30_2
@@ -21,6 +21,30 @@ conda install minimap2=2.30 -c bioconda
 
 # Verified the installation
 minimap2 -h
+```
 
+```{r load library, eval=FALSE}
+library("IRanges")
+library("GenomicRanges")
+library("Rsamtools")
+library("GenomicAlignments")
+library("Gviz")
+```
+
+```{bash conda run flye, eval=FALSE}
+conda activate flye-env
+
+flye --nano-raw /Users/owang/repos/BIOL4315_Lab2_OW/ERR1539001.fastq --out-dir /Users/owang/repos/BIOL4315_Lab3/BIOL4315_Lab3_OW/flye_output --threads 8 --genome-size 12m
 
 ```
+
+```{r flye_output, eval=FALSE}
+	Total length:	12705075
+	Fragments:	355
+	Fragments N50:	52932
+	Largest frg:	302365
+	Scaffolds:	0
+	Mean coverage:	8
+```
+
+
