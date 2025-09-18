@@ -1,0 +1,26 @@
+---
+title: "BIOL4315_Lab3_OW"
+output: html_document
+date: "2025-09-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 1. The Set
+```{bash, eval=FALSE}
+#Pull quast for QC of assembly
+docker pull quay.io/biocontainers/quast:5.3.0--py313pl5321h5ca1c30_2
+
+conda search minimap2
+
+conda create --name minimap2_env 
+conda activate minimap2_env
+conda install minimap2=2.30 -c bioconda
+
+# Verified the installation
+minimap2 -h
+
+
+```
