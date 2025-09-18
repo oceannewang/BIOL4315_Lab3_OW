@@ -31,6 +31,7 @@ library("GenomicAlignments")
 library("Gviz")
 ```
 
+## 4 Assemble the genome
 ```{bash conda run flye, eval=FALSE}
 conda activate flye-env
 
@@ -38,6 +39,7 @@ flye --nano-raw /Users/owang/repos/BIOL4315_Lab2_OW/ERR1539001.fastq --out-dir /
 
 ```
 
+## 4.1 Assignment question 1
 ```{r flye_output, eval=FALSE}
 	Total length:	12705075
 	Fragments:	355
@@ -46,5 +48,7 @@ flye --nano-raw /Users/owang/repos/BIOL4315_Lab2_OW/ERR1539001.fastq --out-dir /
 	Scaffolds:	0
 	Mean coverage:	8
 ```
+Based on the results, the coverage is 8 and generally a 30x coverage is expected for a good genome.
 
+## Evaluate the assembly
 
