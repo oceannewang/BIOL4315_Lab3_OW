@@ -51,4 +51,16 @@ flye --nano-raw /Users/owang/repos/BIOL4315_Lab2_OW/ERR1539001.fastq --out-dir /
 Based on the results, the coverage is 8 and generally a 30x coverage is expected for a good genome.
 
 ## Evaluate the assembly
+```{bash BUSCO, eval=FALSE}
+docker run --rm \
+  -v "$PWD":/data \
+  -w /data \
+  ezlabgva/busco:v6.0.0_cv1 \
+  busco -i assembly.fasta -o busco_output -l saccharomycetaceae_odb12 -m genome -c 8
 
+```
+
+## 5.1.1 Assignmnt question 2
+
+
+```{}
